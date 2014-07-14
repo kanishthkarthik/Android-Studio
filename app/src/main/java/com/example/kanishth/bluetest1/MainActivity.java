@@ -50,7 +50,7 @@ public class MainActivity extends Activity {
         }
         else{
             Toast.makeText(getApplicationContext(),"Already on",
-                    Toast.LENGTH_LONG).show();
+                     Toast.LENGTH_LONG).show();
         }
         Intent discoverableIntent = new
                 Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
