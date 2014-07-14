@@ -46,7 +46,7 @@ public class MainActivity extends Activity {
             Intent turnOn = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
             startActivityForResult(turnOn, 0);
             Toast.makeText(getApplicationContext(),"Turned on"
-                   ,Toast.LENGTH_LONG).show();
+                  ,Toast.LENGTH_LONG).show();
         }
         else{
             Toast.makeText(getApplicationContext(),"Already on",
