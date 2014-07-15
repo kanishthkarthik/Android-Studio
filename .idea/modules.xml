@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Android-Studio.iml" filepath="$PROJECT_DIR$/Android-Studio.iml" />
       <module fileurl="file://$PROJECT_DIR$/BlueTest1.iml" filepath="$PROJECT_DIR$/BlueTest1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BlueToothApp.iml" filepath="$PROJECT_DIR$/BlueToothApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

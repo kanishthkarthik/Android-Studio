@@ -42,16 +42,7 @@ public class MainActivity extends Activity {
     }
 
     public void send(View view){
-        if (!BA.isEnabled()) {
-            Intent turnOn = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
-            startActivityForResult(turnOn, 0);
-            Toast.makeText(getApplicationContext(),"Turned on"
-                  ,Toast.LENGTH_LONG).show();
-        }
-        else{
-            Toast.makeText(getApplicationContext(),"Already on",
-                     Toast.LENGTH_LONG).show();
-        }
+
         Intent discoverableIntent = new
                 Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
         discoverableIntent.putExtra(BluetoothAdapter.EXTRA_DISCOVERABLE_DURATION, 300);
@@ -60,7 +51,7 @@ public class MainActivity extends Activity {
 
 
         AcceptThread();
-        run();
+        AcceptThread.run();
     }
     public void list(View view){
         pairedDevices = BA.getBondedDevices();
