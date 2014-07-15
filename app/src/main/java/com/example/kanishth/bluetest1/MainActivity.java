@@ -22,7 +22,7 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
-    private Button send,Off,Visible,list;
+    private Button send,recieve,Visible,list;
     private BluetoothAdapter BA;
     private Set<BluetoothDevice>pairedDevices;
     private ListView lv;
@@ -33,7 +33,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         send = (Button)findViewById(R.id.button1);
-        //Off = (Button)findViewById(R.id.button2);
+        recieve = (Button)findViewById(R.id.button2);
         //Visible = (Button)findViewById(R.id.button3);
         //list = (Button)findViewById(R.id.button4);
         text=(TextView)findViewById(R.id.textView1);
@@ -50,9 +50,23 @@ public class MainActivity extends Activity {
         text.setText("Discoverable!!");
 
 
-        AcceptThread();
-        AcceptThread.run();
+        AcceptThread obj1 = new AcceptThread();
+        obj1.run();
     }
+
+    public void recieve(View view){
+
+        Intent discoverableIntent = new
+                Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
+        discoverableIntent.putExtra(BluetoothAdapter.EXTRA_DISCOVERABLE_DURATION, 300);
+        startActivity(discoverableIntent);
+        text.setText("Discoverable!!");
+
+
+        AcceptThread obj1 = new AcceptThread();
+        obj1.run();
+    }
+
     public void list(View view){
         pairedDevices = BA.getBondedDevices();
 

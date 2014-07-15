@@ -36,6 +36,14 @@
                 android:onClick="send"
                 android:text="@string/send" />
 
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="visible"
+                android:text="@string/recieve" />
+
+
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
